@@ -40,7 +40,7 @@ class ClientController extends Controller
         $request->validate([
             'person_name' => 'required',
             'business_name' => 'required',
-            'business_gst_number' => 'required' //optional if you want this to be required
+            'business_gst_number' => 'required' 
         ]);
         $clients = Client::create($request->all());
         return response()->json([

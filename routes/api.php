@@ -25,7 +25,7 @@ Route::get('/clients', 'ClientController@index')->name('clients.all');
 //Route::delete('/expenses/{expense}', 'ExpenseController@destroy')->name('expenses.destroy');
 Route::get('/clients/{clients}', 'ClientController@show')->name('clients.show');
 Route::delete('/clients/{clients}', 'ClientController@destroy')->name('clients.destroy');
-//les routes protegés
+//les routes protegées
 Route::middleware('auth:sanctum')->group(function(){
     //Route::get('/expenses', 'ExpenseController@index')->name('expenses.all');
    // Route::post('/expenses', 'ExpenseController@store')->name('expenses.strore');
