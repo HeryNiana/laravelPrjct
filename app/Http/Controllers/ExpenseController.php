@@ -22,7 +22,6 @@ class ExpenseController extends Controller
         return response()->json($expenses);
     }
 
-   
 
     /**
      * Store a newly created resource in storage.

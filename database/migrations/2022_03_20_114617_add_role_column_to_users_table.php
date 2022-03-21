@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class RenameNameNomToExpensesTable extends Migration
+class AddRoleColumnToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class RenameNameNomToExpensesTable extends Migration
      */
     public function up()
     {
-        Schema::table('expenses', function (Blueprint $table) {
-            $table->renameColumn('name','nom');//en installant un package:composer require doctrine/dbal
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('role');
         });
     }
 
@@ -25,7 +25,7 @@ class RenameNameNomToExpensesTable extends Migration
      */
     public function down()
     {
-        Schema::table('expenses', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             //
         });
     }
